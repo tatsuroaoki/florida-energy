@@ -1,0 +1,86 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  color: #242323;
+  font-family: "Quicksand", sans-serif; }
+
+.global-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.global-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  z-index: 1; }
+
+.global-menu-button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  width: 80px; }
+  .global-menu-button div {
+    margin: 0 auto; }
+    .global-menu-button div div {
+      width: 40px;
+      height: 5px;
+      background-color: white;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+
+.global-menu-button:hover {
+  background-color: darkgrey; }
+  .global-menu-button:hover .global-dropdown-content {
+    display: block;
+    background-color: black; }
+    .global-menu-button:hover .global-dropdown-content :hover {
+      text-shadow: 2px 2px grey; }
+    .global-menu-button:hover .global-dropdown-content a {
+      display: block;
+      font-size: 1rem;
+      color: white;
+      font-family: "Quicksand", sans-serif;
+      text-decoration: none;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      text-align: left;
+      padding: 1rem; }
+      .global-menu-button:hover .global-dropdown-content a :visited {
+        text-decoration: none; }
+
+.global-nav-logo {
+  height: 80px;
+  width: 300px;
+  background-image: url(../images/FESC.jpg);
+  background-size: 200px 80px;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+@media screen and (min-width: 480px) {
+  .global-nav-logo {
+    width: 100%;
+    background-position: left center; } }
+nav .menu {
+  background-color: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  nav .menu .menu-item {
+    width: 12.5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid black;
+    text-align: center; }
+
+.headline {
+  background-color: lightgrey;
+  margin: 1rem 0 1rem 0; }
+
+/*# sourceMappingURL=index.css.map */

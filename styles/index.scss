@@ -1,0 +1,99 @@
+$main-color: #242323;
+$main-font: "Quicksand", sans-serif;
+
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+}
+
+body {
+	color: $main-color;
+	font-family: $main-font;
+}
+
+.global-nav {
+	display: flex;
+}
+
+.global-dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 150px;
+//	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.global-menu-button {
+	box-sizing: border-box;
+	background-color: black;
+	width: 80px;
+	div {
+		margin: 0 auto;
+		div {
+			width: 40px;
+			height: 5px;
+			background-color: white;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.global-menu-button:hover {
+	background-color: darkgrey;
+	.global-dropdown-content {
+		display: block;
+		background-color: black;
+		& :hover {
+			text-shadow: 2px 2px grey;
+		}
+		a {
+			display: block;
+			font-size: 1rem;
+			color: white;
+			font-family: $main-font;
+			text-decoration: none;
+			box-sizing: border-box;
+			text-align: left;
+			padding: 1rem;
+			& :visited {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.global-nav-logo {
+	height: 80px;
+	width: 300px;
+	background-image: url(../images/FESC.jpg);
+	background-size: 200px 80px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+@media screen and (min-width: 480px) {
+	.global-nav-logo {
+		width: 100%;
+		background-position: left center;
+	}
+}
+
+nav {
+	.menu {
+		background-color: lightgrey;
+		display: flex;
+		.menu-item {
+			width: 12.5%;
+			align-items: center;
+			border: 1px solid black;
+			text-align: center;
+		}
+	}
+}
+.headline {
+	background-color: lightgrey;
+	margin: 1rem 0 1rem 0;
+}

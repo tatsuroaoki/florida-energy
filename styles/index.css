@@ -22,14 +22,15 @@ body {
   z-index: 1; }
 
 .global-menu-button {
+  border: 1px solid white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: black;
-  width: 80px; }
-  .global-menu-button div {
-    margin: 0 auto; }
-    .global-menu-button div div {
-      width: 40px;
+  width: 70px; }
+  .global-menu-button .button-container {
+    margin-top: 20px; }
+    .global-menu-button .button-container div {
+      width: 30px;
       height: 5px;
       background-color: white;
       margin-top: 10px;

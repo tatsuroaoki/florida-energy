@@ -40,7 +40,7 @@ $lg-screen: 1200px;
 @mixin mission-statement-emphasis-text($font-size) {
 	color: $mission-emphasis-color;
 	font-size: $font-size;
-	font-weight: 700;
+	font-weight: 700;	
 	font-family: $mission-font;
 	line-height: 1.2;
 }
@@ -71,13 +71,15 @@ body {
 }
 
 .global-menu-button {
+	border: 1px solid white;
 	box-sizing: border-box;
 	background-color: black;
-	width: 80px;
-	div {
-		margin: 0 auto;
+	width: 70px;
+	.button-container {
+		margin-top:20px;
+//		margin: 0 auto;
 		div {
-			width: 40px;
+			width: 30px;
 			height: 5px;
 			background-color: white;
 			margin-top: 10px;

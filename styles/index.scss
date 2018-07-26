@@ -1,5 +1,49 @@
-$main-color: #242323;
+$main-font-color: #242323;
 $main-font: "Quicksand", sans-serif;
+$mission-font: "Poppins", sans-serif;
+$mission-emphasis-color: #B4DEAB;
+$sm-screen: 768px;
+$md-screen: 992px;
+$lg-screen: 1200px;
+
+@mixin background-image($src) {
+	background-image: url($src);
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+@mixin mission-container($width,$min-height) {
+	width: $width;
+	min-height: $min-height;
+	background-color:#FFECE9;
+}
+
+@mixin primary-mission-statement($font-size) {
+	font-size: $font-size;
+	font-weight: 500;
+	font-family: $mission-font;
+	text-align: center;
+	line-height: 1.1;
+	padding: 1rem;
+}
+
+@mixin secondary-mission-statement($font-size,$width) {
+	font-size: $font-size;
+	font-weight: 500;
+	font-family: $mission-font;
+	background-color: #171717;
+	line-height: 1.1;
+	padding: 1rem;
+	width: $width;
+}
+
+@mixin mission-statement-emphasis-text($font-size) {
+	color: $mission-emphasis-color;
+	font-size: $font-size;
+	font-weight: 700;
+	font-family: $mission-font;
+	line-height: 1.2;
+}
 
 *{
 	margin: 0 auto;
@@ -8,8 +52,9 @@ $main-font: "Quicksand", sans-serif;
 }
 
 body {
-	color: $main-color;
+	color: $main-font-color;
 	font-family: $main-font;
+	font-weight:400;
 }
 
 .global-nav {
@@ -21,7 +66,7 @@ body {
 	position: absolute;
 	background-color: #f1f1f1;
 	min-width: 150px;
-//	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	//	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
 
@@ -42,7 +87,7 @@ body {
 }
 
 .global-menu-button:hover {
-	background-color: darkgrey;
+	background-color: #302F30;
 	.global-dropdown-content {
 		display: block;
 		background-color: black;
@@ -74,26 +119,197 @@ body {
 	background-position: center center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: $sm-screen) {
+	.global-nav-logo {
+		width: 100%;
+		background-position: center center;
+	}
+}
+
+@media screen and (min-width: $sm-screen) {
 	.global-nav-logo {
 		width: 100%;
 		background-position: left center;
 	}
 }
 
-nav {
-	.menu {
-		background-color: lightgrey;
-		display: flex;
-		.menu-item {
-			width: 12.5%;
-			align-items: center;
-			border: 1px solid black;
-			text-align: center;
+#mission-statement {
+	@include background-image("../images/world-energy.png");
+	.primary-mission-statement {
+		color: white;
+	}
+}
+
+#mission-1 {
+	@include background-image("../images/efficient_energy.png");
+	.secondary-mission-statement {
+		color: white;
+	}
+}
+
+#mission-2 {
+	@include background-image("../images/alternative_energy.png");
+	.secondary-mission-statement {
+		color: white;
+	}
+}
+
+#mission-3 {
+	@include background-image("../images/improve_efficiency.png");
+	.secondary-mission-statement {
+		color: white;
+	}
+}
+
+// media queries to make primary mission statement container responsive
+@media screen and (max-width: $sm-screen) {
+	.main-container {
+		.primary-mission-container {
+			@include mission-container(100%,300px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
 		}
 	}
 }
-.headline {
-	background-color: lightgrey;
-	margin: 1rem 0 1rem 0;
+
+@media screen and (min-width: $sm-screen) {
+	.main-container {
+		.primary-mission-container {
+			@include mission-container(100%,400px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $md-screen) {
+	.main-container {
+		.primary-mission-container {
+			@include mission-container(100%,600px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $lg-screen) {
+	.main-container {
+		.primary-mission-container {
+			@include mission-container($lg-screen,800px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+// media queries to make secondary mission statement containers responsive
+@media screen and (max-width: $sm-screen) {
+	.main-container {
+		.secondary-mission-container {
+			@include mission-container(100%,250px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $sm-screen) {
+	.main-container {
+		background-color: white;
+		.secondary-mission-container {
+			@include mission-container(100%,400px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $md-screen) {
+	.main-container {
+		.secondary-mission-container {
+			@include mission-container(100%,500px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $lg-screen) {
+	.main-container {
+		.secondary-mission-container {
+			@include mission-container($lg-screen,800px);
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+// media queries to make primary mission statement section responsive based on screen size
+@media screen and (max-width: $sm-screen) {
+	.primary-mission-statement {
+		@include primary-mission-statement(1.8rem);
+	}
+}
+
+@media screen and (min-width: $sm-screen) {
+	.primary-mission-statement {
+		@include primary-mission-statement(2rem);
+	}
+}
+
+@media screen and (min-width: $md-screen) {
+	.primary-mission-statement {
+		@include primary-mission-statement(3rem);
+	}
+}
+
+@media screen and (min-width: $lg-screen) {
+	.primary-mission-statement {
+		@include primary-mission-statement(4rem);
+	}
+}
+
+// media queries to make secondary mission statement sections responsive based on screen size
+@media screen and (max-width: $lg-screen) {
+	.secondary-mission-statement {
+		@include secondary-mission-statement(0.5rem,100%);
+		.text-emphasis {
+			@include mission-statement-emphasis-text(1.4rem);
+		}
+		div {
+			font-size:1.1rem;
+			font-weight: 400;
+			color: white;
+		}
+	}
+}
+
+@media screen and (min-width: $lg-screen) {
+	.secondary-mission-statement {
+		@include secondary-mission-statement(1rem,$lg-screen);
+		.text-emphasis {
+			@include mission-statement-emphasis-text(2.2rem);
+		}
+		div {
+			font-size:1.4rem;
+			font-weight: 400;
+			color: white;
+		}
+	}
 }

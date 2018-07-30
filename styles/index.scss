@@ -1,5 +1,5 @@
 $main-font-color: #242323;
-$main-font: "Quicksand", sans-serif;
+$main-font: "Roboto", sans-serif;
 $mission-font: "Poppins", sans-serif;
 $mission-emphasis-color: #B4DEAB;
 $sm-screen: 768px;
@@ -77,7 +77,7 @@ body {
 	width: 70px;
 	.button-container {
 		margin-top:20px;
-//		margin: 0 auto;
+		//		margin: 0 auto;
 		div {
 			width: 30px;
 			height: 5px;
@@ -94,7 +94,7 @@ body {
 		display: block;
 		background-color: black;
 		& :hover {
-			text-shadow: 2px 2px grey;
+			color: #FA4616;
 		}
 		a {
 			display: block;
@@ -253,7 +253,7 @@ body {
 @media screen and (min-width: $lg-screen) {
 	.main-container {
 		.secondary-mission-container {
-			@include mission-container($lg-screen,800px);
+			@include mission-container($lg-screen,550px);
 			img {
 				display: block;
 				margin: 0 auto;
@@ -290,9 +290,9 @@ body {
 // media queries to make secondary mission statement sections responsive based on screen size
 @media screen and (max-width: $lg-screen) {
 	.secondary-mission-statement {
-		@include secondary-mission-statement(0.5rem,100%);
+		@include secondary-mission-statement(0.4rem,100%);
 		.text-emphasis {
-			@include mission-statement-emphasis-text(1.4rem);
+			@include mission-statement-emphasis-text(1.3rem);
 		}
 		div {
 			font-size:1.1rem;
@@ -304,14 +304,88 @@ body {
 
 @media screen and (min-width: $lg-screen) {
 	.secondary-mission-statement {
-		@include secondary-mission-statement(1rem,$lg-screen);
+		@include secondary-mission-statement(0.8rem,$lg-screen);
 		.text-emphasis {
-			@include mission-statement-emphasis-text(2.2rem);
+			@include mission-statement-emphasis-text(1.5rem);
 		}
 		div {
 			font-size:1.4rem;
 			font-weight: 400;
 			color: white;
 		}
+	}
+}
+
+// collaboration section
+.collaboration-parent-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: $lg-screen;
+}
+
+// media queries to make commitment section responsive
+
+@media screen and (max-width: $sm-screen) {
+	.collaboration-child-container {
+		width: 100%;
+		min-height: 75px;
+		padding: 1rem;
+		background-color: #F0EAE8;
+		vertical-align: middle;
+	}
+}
+
+@media screen and (min-width: $sm-screen) {
+	.collaboration-child-container {
+		width: 50%;
+		min-height: 150px;
+		padding: 1rem;
+		background-color: #F0EAE8;
+	}
+}
+
+@media screen and (min-width: $md-screen) {
+	.collaboration-child-container {
+		width: 25%;
+		min-height: 200px;
+		padding: 1rem;
+		background-color: #F0EAE8;
+	}
+}
+
+#commitment-1 {
+	background-color: #782F40;
+	color: #CEB888;
+	.commitment-action {
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+}
+
+#commitment-2 {
+	background-color: #BA9B37;
+	color: black;
+	.commitment-action {
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+}
+
+#commitment-3 {
+	background-color: #006747;
+	color: #CFC493;
+	.commitment-action {
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+}
+
+#commitment-4 {
+	background-color: #0021A5;
+	color: #E8E7E5;
+	.commitment-action {
+		font-weight: bold;
+		font-size: 1.1rem;
 	}
 }

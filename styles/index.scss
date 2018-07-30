@@ -1,7 +1,10 @@
+// font-related variables
 $main-font-color: #242323;
 $main-font: "Roboto", sans-serif;
 $mission-font: "Poppins", sans-serif;
 $mission-emphasis-color: #B4DEAB;
+
+// screen size-related variables
 $sm-screen: 768px;
 $md-screen: 992px;
 $lg-screen: 1200px;
@@ -45,6 +48,23 @@ $lg-screen: 1200px;
 	line-height: 1.2;
 }
 
+@mixin commitment-child-container($width,$min-height) {
+	width: $width;
+	min-height: $min-height;
+	padding: 1rem;
+	background-color: #F0EAE8;
+}
+
+@mixin commitment-colors($bg-color,$font-color) {
+	background-color: $bg-color;
+	color: $font-color;
+}
+
+@mixin commitment-action() {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
 *{
 	margin: 0 auto;
 	padding: 0 auto;
@@ -66,7 +86,6 @@ body {
 	position: absolute;
 	background-color: #f1f1f1;
 	min-width: 150px;
-	//	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
 
@@ -317,7 +336,7 @@ body {
 }
 
 // collaboration section
-.collaboration-parent-container {
+.commitment-parent-container {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -327,65 +346,47 @@ body {
 // media queries to make commitment section responsive
 
 @media screen and (max-width: $sm-screen) {
-	.collaboration-child-container {
-		width: 100%;
-		min-height: 75px;
-		padding: 1rem;
-		background-color: #F0EAE8;
-		vertical-align: middle;
+	.commitment-child-container {
+		@include commitment-child-container(100%,75px);
 	}
 }
 
 @media screen and (min-width: $sm-screen) {
-	.collaboration-child-container {
-		width: 50%;
-		min-height: 150px;
-		padding: 1rem;
-		background-color: #F0EAE8;
+	.commitment-child-container {
+		@include commitment-child-container(50%,150px);
 	}
 }
 
 @media screen and (min-width: $md-screen) {
-	.collaboration-child-container {
-		width: 25%;
-		min-height: 200px;
-		padding: 1rem;
-		background-color: #F0EAE8;
+	.commitment-child-container {
+		@include commitment-child-container(25%,200px);
 	}
 }
 
 #commitment-1 {
-	background-color: #782F40;
-	color: #CEB888;
+	@include commitment-colors(#782F40,#CEB888);
 	.commitment-action {
-		font-weight: bold;
-		font-size: 1.1rem;
-	}
+		@include commitment-action()
+			}
 }
 
 #commitment-2 {
-	background-color: #BA9B37;
-	color: black;
+	@include commitment-colors(#BA9B37,black);
 	.commitment-action {
-		font-weight: bold;
-		font-size: 1.1rem;
-	}
+		@include commitment-action()
+			}
 }
 
 #commitment-3 {
-	background-color: #006747;
-	color: #CFC493;
+	@include commitment-colors(#006747,#CFC493);
 	.commitment-action {
-		font-weight: bold;
-		font-size: 1.1rem;
-	}
+		@include commitment-action()
+			}
 }
 
 #commitment-4 {
-	background-color: #0021A5;
-	color: #E8E7E5;
+	@include commitment-colors(#0021A5,#E8E7E5);
 	.commitment-action {
-		font-weight: bold;
-		font-size: 1.1rem;
-	}
+		@include commitment-action()
+			}
 }

@@ -74,6 +74,8 @@ window.onload = function() {
 		// Set chart options
 		var options = {'title':'Energy Consumption in Florida by Year',
 																	curveType: 'function',
+																	backgroundColor: {fill:'transparent'},
+																	'legend': 'none',
 																	'width':400,
 																	'height':300};
 
@@ -154,6 +156,8 @@ window.onload = function() {
 		// Set chart options
 		var options = {'title':'Renewable Energy Production in Florida by Year',
 																	curveType: 'function',
+																	backgroundColor: {fill:'transparent'},
+																	'legend': 'none',
 																	'width':400,
 																	'height':300};
 

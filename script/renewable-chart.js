@@ -14,7 +14,6 @@ function onDOMLoad() {
 
 document.addEventListener("DOMContentLoaded",onDOMLoad)
 
-// 
 function getRenewableEnergyData() {
 	console.log("Getting data is the third step.")
 
@@ -27,7 +26,9 @@ function getRenewableEnergyData() {
 			console.log("Someting went wrong: ", request)
 			return
 		}
+		//			console.log("response: ", request.response)
 		let response = JSON.parse(request.response)
+		//			console.log(response.series[0].data)
 		drawChart(response.series[0].data,'renewable-energy-production-chart','Renewable Energy Production in Florida by Year')
 	}
 
@@ -36,37 +37,32 @@ function getRenewableEnergyData() {
 		return
 	}
 
+	// What does this exactly do??
 	request.send()
 }
 
-// Function for Total Energy Consumption
 function getEnergyConsumptionData() {
 	let request = new XMLHttpRequest()
 	let requestUrl = "http://api.eia.gov/series/?api_key=172ffbfd5cfe29fb085835f6180c4217&series_id=SEDS.TETCB.FL.A"
 
-	// Request data
 	request.open('GET',requestUrl)
 
-	// If data request fails, then run function to show error message
 	request.onload = function() {
 		if (request.status !==200) {
-			console.log("Something went wrong: ", request)
+			console.log("something went wrong: ", request)
 			return
 		}
 
-		// Parse response and concert data to JavaScript object
 		let response = JSON.parse(request.response)
-		
-		// Call drawChart function
 		drawChart(response.series[0].data,'energy-consumption-chart','Total Energy Consumption in Florida by Year')
 	}
 
-	// Error message
 	request.error = function(err){
 		console.log("error is: ", err)
 		return
 	}
 
+	// What does this exactly do??
 	request.send()
 }
 
@@ -76,16 +72,16 @@ function getEnergyConsumptionData() {
 // Pass freshData (will be the retrieved data from API)
 function drawChart(freshData, id, title) {
 	// freshData is array of arrays e.g., [["2018, 32192930]]
-	//	let headerArray = ["title","other title"]
-	//	freshData.shift(headerArray);
+	let headerArray = ["title","other title"]
+	freshData.shift(headerArray);
 
+	// Energy consumption chart
 	// Create the data table.
 	var data = new google.visualization.DataTable();
 	data.addColumn('string', 'Year');
 	data.addColumn('number', 'BTU');
 	data.addRows(freshData);
 
-	// Sort chart to show line graph from old to current
 	data.sort({column: 0, asc: true});
 
 	// Set chart options

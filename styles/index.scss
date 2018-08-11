@@ -17,6 +17,12 @@ $sm-screen-video-height: 300px;
 $md-screen-video-height: 500px;
 $lg-screen-video-height: 600px;
 
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+	box-sizing: border-box;
+}
+
 @mixin background-image($src) {
 	background-image: url($src);
 	background-repeat: no-repeat;
@@ -26,9 +32,10 @@ $lg-screen-video-height: 600px;
 @mixin mission-container($width,$min-height) {
 	width: $width;
 	min-height: $min-height;
-	background-color:black;
+	background-color: #F9FCF8;
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	//	align-items: center;
 }
 
 @mixin primary-mission-statement($font-size) {
@@ -76,16 +83,11 @@ $lg-screen-video-height: 600px;
 	font-size: 1.1rem;
 }
 
-*{
-	margin: 0 auto;
-	padding: 0 auto;
-	box-sizing: border-box;
-}
-
 body {
 	color: $main-font-color;
 	font-family: $main-font;
 	font-weight:400;
+	background-color: #F9FCF8;
 }
 
 .global-nav {
@@ -188,8 +190,6 @@ body {
 		width: 100%;
 		text-align: center;
 		background-color: black;
-		position: sticky;
-		top: 0;
 	}
 }
 
@@ -204,8 +204,6 @@ body {
 		width: 100%;
 		text-align: center;
 		background-color: black;
-		position: sticky;
-		top: 0;
 	}
 }
 
@@ -221,8 +219,6 @@ body {
 		width: 100%;
 		text-align: center;
 		background-color: black;
-		position: sticky;
-		top: 0;
 	}
 }
 
@@ -239,8 +235,6 @@ body {
 		width: $lg-screen;
 		text-align: center;
 		background-color: black;
-		position: sticky;
-		top: 0;
 	}
 }
 
@@ -323,7 +317,7 @@ body {
 
 @media screen and (min-width: $sm-screen) {
 	.main-container {
-		background-color: white;
+		//		background-color: #F9FCF8;
 		.secondary-mission-container {
 			@include mission-container(100%,400px);
 			img {
@@ -466,4 +460,36 @@ body {
 	.commitment-action {
 		@include commitment-action()
 			}
+}
+
+.mission-statement-article {
+	margin: 1rem auto;
+	p {
+		line-height: 1.75rem;
+	}
+	div p {
+		background-color: #FFFAF9;
+		padding: 1rem;
+		
+	}
+}
+
+.primary-message {
+	text-transform: uppercase;
+	text-align:center;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #006747;
+	padding: 1rem;
+}
+
+.chart-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: $sm-screen) {
+	.chart-child {
+		width:100%;
+	}
 }

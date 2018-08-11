@@ -14,7 +14,6 @@ function onDOMLoad() {
 
 document.addEventListener("DOMContentLoaded",onDOMLoad)
 
-// 
 function getRenewableEnergyData() {
 	console.log("Getting data is the third step.")
 

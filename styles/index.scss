@@ -3,6 +3,7 @@ $main-font-color: #242323;
 $main-font: "Roboto", sans-serif;
 $mission-font: "Poppins", sans-serif;
 $mission-emphasis-color: #B4DEAB;
+$primary-mission-statement-font: "Lalezar", cursive;
 
 // screen size-related variables
 //$xs-screen: 576px;
@@ -12,10 +13,10 @@ $md-screen: 992px;
 $lg-screen: 1200px;
 
 // video heights:
-$xs-screen-video-height: 250px;
-$sm-screen-video-height: 300px;
-$md-screen-video-height: 500px;
-$lg-screen-video-height: 600px;
+$xs-screen-video-height: 150px;
+$sm-screen-video-height: 200px;
+$md-screen-video-height: 350px;
+$lg-screen-video-height: 400px;
 
 *{
 	margin: 0 auto;
@@ -23,10 +24,32 @@ $lg-screen-video-height: 600px;
 	box-sizing: border-box;
 }
 
+@mixin video-button($radius) {
+	width: 10rem;
+	height: 50px;
+	border-radius: $radius;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 3px solid black;
+	@content;
+}
+
 @mixin background-image($src) {
 	background-image: url($src);
 	background-repeat: no-repeat;
 	background-size:cover;
+	@content;
+}
+
+@mixin background-image-transparency($opacity) {
+	opacity: $opacity;
+	content:"";
+	z-index: -1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
 }
 
 @mixin mission-container($width,$min-height) {
@@ -35,17 +58,17 @@ $lg-screen-video-height: 600px;
 	background-color: #F9FCF8;
 	display: flex;
 	flex-wrap: wrap;
-	//	align-items: center;
 }
 
 @mixin primary-mission-statement($font-size) {
 	font-size: $font-size;
 	font-weight: 500;
-	font-family: $mission-font;
+	font-family: $primary-mission-statement-font;
 	color: white;
 	text-align: center;
 	line-height: 1.1;
 	padding: 1rem;
+	text-shadow: 5px 5px black;
 }
 
 @mixin secondary-mission-statement($font-size,$width) {
@@ -88,6 +111,10 @@ body {
 	font-family: $main-font;
 	font-weight:400;
 	background-color: #F9FCF8;
+}
+
+#homepage-video-container {
+	color:black;
 }
 
 .global-nav {
@@ -167,10 +194,6 @@ body {
 	}
 }
 
-#mission-statement {
-	@include background-image("../images/world-energy.png");
-}
-
 #mission-1 {
 	@include background-image("../images/efficient_energy.png");
 	.secondary-mission-statement {
@@ -186,7 +209,7 @@ body {
 		margin: 0.3rem ;
 	}
 
-	.homepage-video-container {
+	#homepage-video-container {
 		width: 100%;
 		text-align: center;
 		background-color: black;
@@ -200,7 +223,8 @@ body {
 		height: $sm-screen-video-height;
 		margin: 1rem 0;
 	}
-	.homepage-video-container {
+
+	#homepage-video-container {
 		width: 100%;
 		text-align: center;
 		background-color: black;
@@ -209,13 +233,12 @@ body {
 
 @media screen and (min-width: $md-screen) {
 	.homepage-video {
-		width: $md-screen;
-		object-fit: cover;
+		width: 100%;
 		height: $md-screen-video-height;
 		margin: 1rem 0;
 	}
 
-	.homepage-video-container {
+	#homepage-video-container {
 		width: 100%;
 		text-align: center;
 		background-color: black;
@@ -224,14 +247,12 @@ body {
 
 @media screen and (min-width: $lg-screen) {
 	.homepage-video {
-		width: $lg-screen;
-		object-fit: cover;
+		width: 100%;
 		height: $lg-screen-video-height;
 		background-color: black;
-		margin: 3rem 0;
 	}
 
-	.homepage-video-container {
+	#homepage-video-container {
 		width: $lg-screen;
 		text-align: center;
 		background-color: black;
@@ -258,9 +279,26 @@ body {
 	.main-container {
 		.primary-mission-container {
 			@include mission-container(100%,300px);
-			img {
-				display: flex;
-				margin: 0 auto;
+			position: relative;
+			display: block;
+			z-index: 1;
+			& ::after {
+				@include background-image("../images/world-energy.png") {
+					@include background-image-transparency(1);
+				}
+			}
+			#video-button {
+				@include video-button(0) {
+					position: absolute;
+					top: 80%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+
+				&:hover {
+					background-color: #98B4E8;
+				}
 			}
 		}
 	}
@@ -270,9 +308,25 @@ body {
 	.main-container {
 		.primary-mission-container {
 			@include mission-container(100%,400px);
-			img {
-				display: flex;
-				margin: 0 auto;
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/world-energy.png") {
+					@include background-image-transparency(1);
+				}
+			}
+			#video-button {
+				@include video-button(0) {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+
+				&:hover {
+					background-color: #98B4E8;
+				}
 			}
 		}
 	}
@@ -282,9 +336,26 @@ body {
 	.main-container {
 		.primary-mission-container {
 			@include mission-container(100%,500px);
-			img {
-				display: flex;
-				margin: 0 auto;
+			position: relative;
+			display: block;
+			z-index: 1;
+			& ::after {
+				@include background-image("../images/world-energy.png") {
+					@include background-image-transparency(1);
+				}
+			}
+			#video-button {
+				@include video-button(0) {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+
+				&:hover {
+					background-color: #98B4E8;
+				}
 			}
 		}
 	}
@@ -294,9 +365,25 @@ body {
 	.main-container {
 		.primary-mission-container {
 			@include mission-container($lg-screen,600px);
-			img {
-				display: flex;
-				margin: 0 auto;
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/world-energy.png") {
+					@include background-image-transparency(1);
+				}
+			}
+			#video-button {
+				@include video-button(0) {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+
+				&:hover {
+					background-color: #98B4E8;
+				}
 			}
 		}
 	}
@@ -355,25 +442,25 @@ body {
 // media queries to make primary mission statement section responsive based on screen size
 @media screen and (max-width: $sm-screen) {
 	.primary-mission-statement {
-		@include primary-mission-statement(1.8rem);
+		@include primary-mission-statement(2.7rem);
 	}
 }
 
 @media screen and (min-width: $sm-screen) {
 	.primary-mission-statement {
-		@include primary-mission-statement(2rem);
+		@include primary-mission-statement(3.5rem);
 	}
 }
 
 @media screen and (min-width: $md-screen) {
 	.primary-mission-statement {
-		@include primary-mission-statement(3rem);
+		@include primary-mission-statement(4.5rem);
 	}
 }
 
 @media screen and (min-width: $lg-screen) {
 	.primary-mission-statement {
-		@include primary-mission-statement(4rem);
+		@include primary-mission-statement(5.1rem);
 	}
 }
 
@@ -470,7 +557,7 @@ body {
 	div p {
 		background-color: #FFFAF9;
 		padding: 1rem;
-		
+
 	}
 }
 

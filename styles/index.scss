@@ -28,7 +28,7 @@ $lg-screen-video-height: 400px;
 }
 
 @mixin video-button($radius) {
-	background-color: #C8E8C3;
+	background-color: #0C9E59;
 	font-family: "Questrial", sans-serif;
 	width: 10rem;
 	height: 50px;
@@ -108,7 +108,7 @@ $lg-screen-video-height: 400px;
 
 @mixin commitment-action() {
 	font-weight: bold;
-	font-size: 1.1rem;
+	font-size: 1.7rem;
 }
 
 body {
@@ -246,8 +246,9 @@ body {
 			@include mission-container(100%,250px);
 		}
 		#mission-1 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/efficient_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -259,10 +260,35 @@ body {
 					@include mission-statement-emphasis-text(2rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		#mission-2 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/alternative_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -274,10 +300,36 @@ body {
 					@include mission-statement-emphasis-text(2rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+					& :hover {
+						color: grey;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		#mission-3 {
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/improve_efficiency.png") {
 					@include background-image-transparency($image-transparency);
@@ -289,23 +341,60 @@ body {
 					@include mission-statement-emphasis-text(2rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+					& :hover {
+						color: grey;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		section {
+			width: 100%;
 			.commitment-statement {
 				@include background-image("../images/hands_in.png");
-				height: 500px;
-				width: $lg-screen;
-				.commitment-title {
-					background: rgba(130,232,131,0.20);
+				height: 100px;
+				.commitment-statement-child {
+					background: rgba(130,232,131,0.4);
 					width: 100%;
+					height: 100%;
 					z-index:1;
-					font-size: 4rem;
-					text-align: center;
 					display: flex;
-					flex-wrap:wrap;
+					align-items: center;
+					h2 {
+						font-size: 2.2rem;
+						font-family: "Questrial", sans-serif;
+						text-shadow: 3px 3px white;
+					}
 				}
+			}
+			.commitment-parent-container {
+				display: flex;
+				flex-wrap:wrap;
+				align-items: center;
+				font-size: 1rem;
 				.commitment-child-container {
-					@include commitment-child-container(100%,75px);
+					@include commitment-child-container(25%,120px);
 				}
 			}
 		}
@@ -333,6 +422,9 @@ body {
 				color: #1985bc;
 			}
 		}
+	}
+	.chart-child {
+		width:100%;
 	}
 }
 
@@ -380,8 +472,9 @@ body {
 			@include mission-container(100%,400px);
 		}
 		#mission-1 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/efficient_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -393,10 +486,38 @@ body {
 					@include mission-statement-emphasis-text(3rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+					& :hover {
+						color: grey;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		#mission-2 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/alternative_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -408,10 +529,38 @@ body {
 					@include mission-statement-emphasis-text(3rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+					& :hover {
+						color: grey;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		#mission-3 {
 			position: relative;
-			display: block;
+			display: flex;
+			align-items: center;
 			& ::after {
 				@include background-image("../images/improve_efficiency.png") {
 					@include background-image-transparency($image-transparency);
@@ -423,23 +572,60 @@ body {
 					@include mission-statement-emphasis-text(3rem);
 				}
 			}
+			.learn {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-align: center;
+				font-size: 1.5rem;
+				a {
+					text-decoration: none;
+					.fas {
+						margin-top: 1rem;
+						color: white;
+						text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+					}
+					& :hover {
+						color: grey;
+					}
+				}
+				.learn-button {
+					border-radius: 30px;
+					background-color: #0C9E59;
+					color: white;
+					h4 {
+						margin: 0 1rem;
+						padding: 0.5rem;
+					}
+				}
+			}
 		}
 		section {
+			width: 100%;
 			.commitment-statement {
 				@include background-image("../images/hands_in.png");
-				height: 500px;
-				width: $lg-screen;
-				.commitment-title {
-					background: rgba(130,232,131,0.20);
+				height: 120px;
+				.commitment-statement-child {
+					background: rgba(130,232,131,0.4);
 					width: 100%;
+					height: 100%;
 					z-index:1;
-					font-size: 4rem;
-					text-align: center;
 					display: flex;
-					flex-wrap:wrap;
+					align-items: center;
+					h2 {
+						font-size: 4rem;
+						font-family: "Questrial", sans-serif;
+						text-shadow: 3px 3px white;
+					}
 				}
+			}
+			.commitment-parent-container {
+				display: flex;
+				flex-wrap:wrap;
+				align-items: center;
+				font-size: 1rem;
 				.commitment-child-container {
-					@include commitment-child-container(50%,90px);
+					@include commitment-child-container(25%,120px);
 				}
 			}
 		}
@@ -536,8 +722,9 @@ body {
 			@include mission-container(100%,500px);
 		}
 		#mission-1 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/efficient_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -551,8 +738,9 @@ body {
 			}
 		}
 		#mission-2 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/alternative_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -566,8 +754,9 @@ body {
 			}
 		}
 		#mission-3 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/improve_efficiency.png") {
 					@include background-image-transparency($image-transparency);
@@ -581,21 +770,31 @@ body {
 			}
 		}
 		section {
+			width: 100%;
 			.commitment-statement {
 				@include background-image("../images/hands_in.png");
-				height: 500px;
-				width: $lg-screen;
-				.commitment-title {
-					background: rgba(130,232,131,0.20);
+				height: 150px;
+				.commitment-statement-child {
+					background: rgba(130,232,131,0.4);
 					width: 100%;
+					height: 100%;
 					z-index:1;
-					font-size: 4rem;
-					text-align: center;
 					display: flex;
-					flex-wrap:wrap;
+					align-items: center;
+					h2 {
+						font-size: 5rem;
+						font-family: "Questrial", sans-serif;
+						text-shadow: 3px 3px white;
+					}
 				}
+			}
+			.commitment-parent-container {
+				display: flex;
+				flex-wrap:wrap;
+				align-items: center;
+				font-size: 1rem;
 				.commitment-child-container {
-					@include commitment-child-container(25%,100px);
+					@include commitment-child-container(25%,120px);
 				}
 			}
 		}
@@ -645,8 +844,9 @@ body {
 			@include mission-container($lg-screen,550px);
 		}
 		#mission-1 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/efficient_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -660,8 +860,9 @@ body {
 			}
 		}
 		#mission-2 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/alternative_energy.png") {
 					@include background-image-transparency($image-transparency);
@@ -675,8 +876,9 @@ body {
 			}
 		}
 		#mission-3 {
+			display: flex;
+			align-items: center;
 			position: relative;
-			display: block;
 			& ::after {
 				@include background-image("../images/improve_efficiency.png") {
 					@include background-image-transparency($image-transparency);
@@ -720,47 +922,22 @@ body {
 		}
 	}
 }
-#commitment-1 {
-	@include commitment-colors(#782F40,#CEB888);
-	.commitment-action {
-		@include commitment-action()
-			}
-}
-
-#commitment-2 {
-	@include commitment-colors(#BA9B37,black);
-	.commitment-action {
-		@include commitment-action()
-			}
-}
-
-#commitment-3 {
-	@include commitment-colors(#006747,#CFC493);
-	.commitment-action {
-		@include commitment-action()
-			}
-}
-
-#commitment-4 {
-	@include commitment-colors(#0021A5,#E8E7E5);
-	.commitment-action {
-		@include commitment-action()
-			}
-}
-
 .mission-statement-article {
 	margin: 1rem auto;
 	p {
 		line-height: 1.75rem;
 	}
 	div p {
-		background-color: #FFFAF9;
+		font-family: "Questrial", sans-serif;
+		background-color: #0C9E59;
+		color: white;
 		padding: 1rem;
 
 	}
 }
 
 .primary-message {
+	font-family: "Questrial", sans-serif;
 	text-transform: uppercase;
 	text-align:center;
 	font-weight: bold;
@@ -772,10 +949,4 @@ body {
 .chart-container {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-@media screen and (max-width: $sm-screen) {
-	.chart-child {
-		width:100%;
-	}
 }

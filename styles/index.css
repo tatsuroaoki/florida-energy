@@ -122,7 +122,7 @@ body {
       padding: 1rem;
       text-shadow: 5px 5px black; }
     .main-container .primary-mission-container #video-button {
-      background-color: #C8E8C3;
+      background-color: #0C9E59;
       font-family: "Questrial", sans-serif;
       width: 10rem;
       height: 50px;
@@ -146,8 +146,13 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .main-container #mission-1 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-1 ::after {
       background-image: url("../images/efficient_energy.png");
       background-repeat: no-repeat;
@@ -174,9 +179,37 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
+    .main-container #mission-1 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
+      text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-1 .learn a {
+        text-decoration: none; }
+        .main-container #mission-1 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+      .main-container #mission-1 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-1 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
   .main-container #mission-2 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-2 ::after {
       background-image: url("../images/alternative_energy.png");
       background-repeat: no-repeat;
@@ -203,9 +236,33 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
+    .main-container #mission-2 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
+      text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-2 .learn a {
+        text-decoration: none; }
+        .main-container #mission-2 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+        .main-container #mission-2 .learn a :hover {
+          color: grey; }
+      .main-container #mission-2 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-2 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
   .main-container #mission-3 {
-    position: relative;
-    display: block; }
+    position: relative; }
     .main-container #mission-3 ::after {
       background-image: url("../images/improve_efficiency.png");
       background-repeat: no-repeat;
@@ -232,28 +289,68 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
-  .main-container section .commitment-statement {
-    background-image: url("../images/hands_in.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 1200px; }
-    .main-container section .commitment-statement .commitment-title {
-      background: rgba(130, 232, 131, 0.2);
-      width: 100%;
-      z-index: 1;
-      font-size: 4rem;
+    .main-container #mission-3 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
       text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-3 .learn a {
+        text-decoration: none; }
+        .main-container #mission-3 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+        .main-container #mission-3 .learn a :hover {
+          color: grey; }
+      .main-container #mission-3 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-3 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
+  .main-container section {
+    width: 100%; }
+    .main-container section .commitment-statement {
+      background-image: url("../images/hands_in.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px; }
+      .main-container section .commitment-statement .commitment-statement-child {
+        background: rgba(130, 232, 131, 0.4);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .main-container section .commitment-statement .commitment-statement-child h2 {
+          font-size: 2.2rem;
+          font-family: "Questrial", sans-serif;
+          text-shadow: 3px 3px white; }
+    .main-container section .commitment-parent-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-    .main-container section .commitment-statement .commitment-child-container {
-      width: 100%;
-      min-height: 75px;
-      padding: 1rem;
-      background-color: #F0EAE8; }
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 1rem; }
+      .main-container section .commitment-parent-container .commitment-child-container {
+        width: 25%;
+        min-height: 120px;
+        padding: 1rem;
+        background-color: #F0EAE8; }
 
   footer {
     display: -webkit-box;
@@ -275,7 +372,10 @@ body {
       footer div .fa-twitter-square {
         color: #1da1f2; }
       footer div .fa-linkedin {
-        color: #1985bc; } }
+        color: #1985bc; }
+
+  .chart-child {
+    width: 100%; } }
 @media screen and (min-width: 768px) {
   .main-container #homepage-video-container {
     width: 100%;
@@ -319,7 +419,7 @@ body {
       padding: 1rem;
       text-shadow: 5px 5px black; }
     .main-container .primary-mission-container #video-button {
-      background-color: #C8E8C3;
+      background-color: #0C9E59;
       font-family: "Questrial", sans-serif;
       width: 10rem;
       height: 50px;
@@ -343,8 +443,13 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .main-container #mission-1 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-1 ::after {
       background-image: url("../images/efficient_energy.png");
       background-repeat: no-repeat;
@@ -371,9 +476,39 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
+    .main-container #mission-1 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
+      text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-1 .learn a {
+        text-decoration: none; }
+        .main-container #mission-1 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+        .main-container #mission-1 .learn a :hover {
+          color: grey; }
+      .main-container #mission-1 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-1 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
   .main-container #mission-2 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-2 ::after {
       background-image: url("../images/alternative_energy.png");
       background-repeat: no-repeat;
@@ -400,9 +535,39 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
+    .main-container #mission-2 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
+      text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-2 .learn a {
+        text-decoration: none; }
+        .main-container #mission-2 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+        .main-container #mission-2 .learn a :hover {
+          color: grey; }
+      .main-container #mission-2 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-2 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
   .main-container #mission-3 {
     position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .main-container #mission-3 ::after {
       background-image: url("../images/improve_efficiency.png");
       background-repeat: no-repeat;
@@ -429,28 +594,68 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
-  .main-container section .commitment-statement {
-    background-image: url("../images/hands_in.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 1200px; }
-    .main-container section .commitment-statement .commitment-title {
-      background: rgba(130, 232, 131, 0.2);
-      width: 100%;
-      z-index: 1;
-      font-size: 4rem;
+    .main-container #mission-3 .learn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: white;
       text-align: center;
+      font-size: 1.5rem; }
+      .main-container #mission-3 .learn a {
+        text-decoration: none; }
+        .main-container #mission-3 .learn a .fas {
+          margin-top: 1rem;
+          color: white;
+          text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
+        .main-container #mission-3 .learn a :hover {
+          color: grey; }
+      .main-container #mission-3 .learn .learn-button {
+        border-radius: 30px;
+        background-color: #0C9E59;
+        color: white; }
+        .main-container #mission-3 .learn .learn-button h4 {
+          margin: 0 1rem;
+          padding: 0.5rem; }
+  .main-container section {
+    width: 100%; }
+    .main-container section .commitment-statement {
+      background-image: url("../images/hands_in.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 120px; }
+      .main-container section .commitment-statement .commitment-statement-child {
+        background: rgba(130, 232, 131, 0.4);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .main-container section .commitment-statement .commitment-statement-child h2 {
+          font-size: 4rem;
+          font-family: "Questrial", sans-serif;
+          text-shadow: 3px 3px white; }
+    .main-container section .commitment-parent-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-    .main-container section .commitment-statement .commitment-child-container {
-      width: 50%;
-      min-height: 90px;
-      padding: 1rem;
-      background-color: #F0EAE8; }
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 1rem; }
+      .main-container section .commitment-parent-container .commitment-child-container {
+        width: 25%;
+        min-height: 120px;
+        padding: 1rem;
+        background-color: #F0EAE8; }
 
   footer {
     -webkit-box-align: center;
@@ -528,7 +733,7 @@ body {
       padding: 1rem;
       text-shadow: 5px 5px black; }
     .main-container .primary-mission-container #video-button {
-      background-color: #C8E8C3;
+      background-color: #0C9E59;
       font-family: "Questrial", sans-serif;
       width: 10rem;
       height: 50px;
@@ -552,8 +757,13 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .main-container #mission-1 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-1 ::after {
       background-image: url("../images/efficient_energy.png");
       background-repeat: no-repeat;
@@ -581,8 +791,13 @@ body {
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
   .main-container #mission-2 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-2 ::after {
       background-image: url("../images/alternative_energy.png");
       background-repeat: no-repeat;
@@ -610,8 +825,13 @@ body {
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
   .main-container #mission-3 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-3 ::after {
       background-image: url("../images/improve_efficiency.png");
       background-repeat: no-repeat;
@@ -638,28 +858,43 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
-  .main-container section .commitment-statement {
-    background-image: url("../images/hands_in.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 1200px; }
-    .main-container section .commitment-statement .commitment-title {
-      background: rgba(130, 232, 131, 0.2);
-      width: 100%;
-      z-index: 1;
-      font-size: 4rem;
-      text-align: center;
+  .main-container section {
+    width: 100%; }
+    .main-container section .commitment-statement {
+      background-image: url("../images/hands_in.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 150px; }
+      .main-container section .commitment-statement .commitment-statement-child {
+        background: rgba(130, 232, 131, 0.4);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .main-container section .commitment-statement .commitment-statement-child h2 {
+          font-size: 5rem;
+          font-family: "Questrial", sans-serif;
+          text-shadow: 3px 3px white; }
+    .main-container section .commitment-parent-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-    .main-container section .commitment-statement .commitment-child-container {
-      width: 25%;
-      min-height: 100px;
-      padding: 1rem;
-      background-color: #F0EAE8; } }
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 1rem; }
+      .main-container section .commitment-parent-container .commitment-child-container {
+        width: 25%;
+        min-height: 120px;
+        padding: 1rem;
+        background-color: #F0EAE8; } }
 @media screen and (min-width: 1200px) {
   .main-container #homepage-video-container {
     width: 1200px;
@@ -701,7 +936,7 @@ body {
       padding: 1rem;
       text-shadow: 5px 5px black; }
     .main-container .primary-mission-container #video-button {
-      background-color: #C8E8C3;
+      background-color: #0C9E59;
       font-family: "Questrial", sans-serif;
       width: 10rem;
       height: 50px;
@@ -725,8 +960,13 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .main-container #mission-1 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-1 ::after {
       background-image: url("../images/efficient_energy.png");
       background-repeat: no-repeat;
@@ -754,8 +994,13 @@ body {
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
   .main-container #mission-2 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-2 ::after {
       background-image: url("../images/alternative_energy.png");
       background-repeat: no-repeat;
@@ -783,8 +1028,13 @@ body {
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
   .main-container #mission-3 {
-    position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
     .main-container #mission-3 ::after {
       background-image: url("../images/improve_efficiency.png");
       background-repeat: no-repeat;
@@ -848,43 +1098,18 @@ body {
         min-height: 120px;
         padding: 1rem;
         background-color: #F0EAE8; } }
-#commitment-1 {
-  background-color: #782F40;
-  color: #CEB888; }
-  #commitment-1 .commitment-action {
-    font-weight: bold;
-    font-size: 1.1rem; }
-
-#commitment-2 {
-  background-color: #BA9B37;
-  color: black; }
-  #commitment-2 .commitment-action {
-    font-weight: bold;
-    font-size: 1.1rem; }
-
-#commitment-3 {
-  background-color: #006747;
-  color: #CFC493; }
-  #commitment-3 .commitment-action {
-    font-weight: bold;
-    font-size: 1.1rem; }
-
-#commitment-4 {
-  background-color: #0021A5;
-  color: #E8E7E5; }
-  #commitment-4 .commitment-action {
-    font-weight: bold;
-    font-size: 1.1rem; }
-
 .mission-statement-article {
   margin: 1rem auto; }
   .mission-statement-article p {
     line-height: 1.75rem; }
   .mission-statement-article div p {
-    background-color: #FFFAF9;
+    font-family: "Questrial", sans-serif;
+    background-color: #0C9E59;
+    color: white;
     padding: 1rem; }
 
 .primary-message {
+  font-family: "Questrial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -898,9 +1123,5 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-
-@media screen and (max-width: 768px) {
-  .chart-child {
-    width: 100%; } }
 
 /*# sourceMappingURL=index.css.map */

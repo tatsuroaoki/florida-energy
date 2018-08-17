@@ -2,8 +2,11 @@
 $main-font-color: #242323;
 $main-font: "Roboto", sans-serif;
 $mission-font: "Poppins", sans-serif;
-$mission-emphasis-color: #B4DEAB;
+$mission-emphasis-color: #5AB28F;
 $primary-mission-statement-font: "Lalezar", cursive;
+
+// image-transparency variables
+$image-transparency: 0.45;
 
 // screen size-related variables
 //$xs-screen: 576px;
@@ -25,10 +28,12 @@ $lg-screen-video-height: 400px;
 }
 
 @mixin video-button($radius) {
+	background-color: #C8E8C3;
+	font-family: "Questrial", sans-serif;
 	width: 10rem;
 	height: 50px;
 	border-radius: $radius;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 	border: 3px solid black;
 	@content;
@@ -55,7 +60,7 @@ $lg-screen-video-height: 400px;
 @mixin mission-container($width,$min-height) {
 	width: $width;
 	min-height: $min-height;
-	background-color: #F9FCF8;
+	//	background-color: #F9FCF8;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -75,10 +80,9 @@ $lg-screen-video-height: 400px;
 	font-size: $font-size;
 	font-weight: 500;
 	font-family: $mission-font;
-	background-color: #171717;
-	line-height: 1.1;
-	padding: 1rem;
+	color: white;
 	width: $width;
+	margin: 0 1rem 0 1rem;
 }
 
 @mixin mission-statement-emphasis-text($font-size) {
@@ -87,6 +91,7 @@ $lg-screen-video-height: 400px;
 	font-weight: 700;	
 	font-family: $mission-font;
 	line-height: 1.2;
+	text-shadow: 2.5px 2.5px #3B3B3A;
 }
 
 @mixin commitment-child-container($width,$min-height) {
@@ -152,6 +157,7 @@ body {
 	.global-dropdown-content {
 		display: block;
 		background-color: black;
+		z-index: 2;
 		& :hover {
 			color: #FA4616;
 		}
@@ -194,89 +200,21 @@ body {
 	}
 }
 
-#mission-1 {
-	@include background-image("../images/efficient_energy.png");
-	.secondary-mission-statement {
-		color: white;
-	}
-}
-
-@media screen and (max-width: $sm-screen) {
-	.homepage-video {
-		max-width: $sm-screen;
-		object-fit: cover;
-		height: $xs-screen-video-height;
-		margin: 0.3rem ;
-	}
-
-	#homepage-video-container {
-		width: 100%;
-		text-align: center;
-		background-color: black;
-	}
-}
-
-@media screen and (min-width: $sm-screen) {
-	.homepage-video {
-		width: $sm-screen;
-		object-fit: cover;
-		height: $sm-screen-video-height;
-		margin: 1rem 0;
-	}
-
-	#homepage-video-container {
-		width: 100%;
-		text-align: center;
-		background-color: black;
-	}
-}
-
-@media screen and (min-width: $md-screen) {
-	.homepage-video {
-		width: 100%;
-		height: $md-screen-video-height;
-		margin: 1rem 0;
-	}
-
-	#homepage-video-container {
-		width: 100%;
-		text-align: center;
-		background-color: black;
-	}
-}
-
-@media screen and (min-width: $lg-screen) {
-	.homepage-video {
-		width: 100%;
-		height: $lg-screen-video-height;
-		background-color: black;
-	}
-
-	#homepage-video-container {
-		width: $lg-screen;
-		text-align: center;
-		background-color: black;
-	}
-}
-
-
-#mission-2 {
-	@include background-image("../images/alternative_energy.png");
-	.secondary-mission-statement {
-		color: white;
-	}
-}
-
-#mission-3 {
-	@include background-image("../images/improve_efficiency.png");
-	.secondary-mission-statement {
-		color: white;
-	}
-}
-
-// media queries to make primary mission statement container responsive
+// media queries to make secondary mission statement containers responsive
 @media screen and (max-width: $sm-screen) {
 	.main-container {
+		#homepage-video-container {
+			width: 100%;
+			text-align: center;
+			background-color: black;
+
+			.homepage-video {
+				max-width: $sm-screen;
+				object-fit: cover;
+				height: $xs-screen-video-height;
+				margin: 0.3rem ;
+			}
+		}
 		.primary-mission-container {
 			@include mission-container(100%,300px);
 			position: relative;
@@ -286,6 +224,9 @@ body {
 				@include background-image("../images/world-energy.png") {
 					@include background-image-transparency(1);
 				}
+			}
+			.primary-mission-statement {
+				@include primary-mission-statement(2.7rem);
 			}
 			#video-button {
 				@include video-button(0) {
@@ -301,11 +242,90 @@ body {
 				}
 			}
 		}
+		.secondary-mission-container {
+			@include mission-container(100%,250px);
+		}
+		#mission-1 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/efficient_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.7rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(2rem);
+				}
+			}
+		}
+		#mission-2 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/alternative_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.7rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(2rem);
+				}
+			}
+		}
+		#mission-3 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/improve_efficiency.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.7rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(2rem);
+				}
+			}
+		}
+		section {
+			.commitment-statement {
+				@include background-image("../images/hands_in.png");
+				height: 500px;
+				width: $lg-screen;
+				.commitment-title {
+					background: rgba(130,232,131,0.20);
+					width: 100%;
+					z-index:1;
+					font-size: 4rem;
+					text-align: center;
+					display: flex;
+					flex-wrap:wrap;
+				}
+				.commitment-child-container {
+					@include commitment-child-container(100%,75px);
+				}
+			}
+		}
 	}
 }
 
 @media screen and (min-width: $sm-screen) {
 	.main-container {
+		#homepage-video-container {
+			width: 100%;
+			text-align: center;
+			background-color: black;
+
+			.homepage-video {
+				width: $sm-screen;
+				object-fit: cover;
+				height: $sm-screen-video-height;
+				margin: 1rem 0;
+			}
+		}
 		.primary-mission-container {
 			@include mission-container(100%,400px);
 			position: relative;
@@ -314,6 +334,9 @@ body {
 				@include background-image("../images/world-energy.png") {
 					@include background-image-transparency(1);
 				}
+			}
+			.primary-mission-statement {
+				@include primary-mission-statement(3.5rem);
 			}
 			#video-button {
 				@include video-button(0) {
@@ -329,11 +352,88 @@ body {
 				}
 			}
 		}
+		.secondary-mission-container {
+			@include mission-container(100%,400px);
+		}
+		#mission-1 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/efficient_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.9rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(3rem);
+				}
+			}
+		}
+		#mission-2 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/alternative_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.9rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(3rem);
+				}
+			}
+		}
+		#mission-3 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/improve_efficiency.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(0.9rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(3rem);
+				}
+			}
+		}
+		section {
+			.commitment-statement {
+				@include background-image("../images/hands_in.png");
+				height: 500px;
+				width: $lg-screen;
+				.commitment-title {
+					background: rgba(130,232,131,0.20);
+					width: 100%;
+					z-index:1;
+					font-size: 4rem;
+					text-align: center;
+					display: flex;
+					flex-wrap:wrap;
+				}
+				.commitment-child-container {
+					@include commitment-child-container(50%,90px);
+				}
+			}
+		}
 	}
 }
 
 @media screen and (min-width: $md-screen) {
 	.main-container {
+		#homepage-video-container {
+			width: 100%;
+			text-align: center;
+			background-color: black;
+			.homepage-video {
+				width: 100%;
+				height: $md-screen-video-height;
+				margin: 1rem 0;
+			}
+		}
 		.primary-mission-container {
 			@include mission-container(100%,500px);
 			position: relative;
@@ -344,6 +444,9 @@ body {
 					@include background-image-transparency(1);
 				}
 			}
+			.primary-mission-statement {
+				@include primary-mission-statement(4.5rem);
+			}
 			#video-button {
 				@include video-button(0) {
 					position: absolute;
@@ -358,11 +461,90 @@ body {
 				}
 			}
 		}
+		.secondary-mission-container {
+			@include mission-container(100%,500px);
+		}
+		#mission-1 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/efficient_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
+			}
+		}
+		#mission-2 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/alternative_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
+			}
+		}
+		#mission-3 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/improve_efficiency.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
+			}
+		}
+		section {
+			.commitment-statement {
+				@include background-image("../images/hands_in.png");
+				height: 500px;
+				width: $lg-screen;
+				.commitment-title {
+					background: rgba(130,232,131,0.20);
+					width: 100%;
+					z-index:1;
+					font-size: 4rem;
+					text-align: center;
+					display: flex;
+					flex-wrap:wrap;
+				}
+				.commitment-child-container {
+					@include commitment-child-container(25%,100px);
+				}
+			}
+		}
 	}
 }
 
+
 @media screen and (min-width: $lg-screen) {
 	.main-container {
+		#homepage-video-container {
+			width: $lg-screen;
+			text-align: center;
+			background-color: black;
+
+			.homepage-video {
+				width: 100%;
+				height: $lg-screen-video-height;
+				background-color: black;
+			}
+		}
 		.primary-mission-container {
 			@include mission-container($lg-screen,600px);
 			position: relative;
@@ -372,6 +554,9 @@ body {
 					@include background-image-transparency(1);
 				}
 			}
+			.primary-mission-statement {
+				@include primary-mission-statement(5.1rem);
+			}
 			#video-button {
 				@include video-button(0) {
 					position: absolute;
@@ -386,138 +571,83 @@ body {
 				}
 			}
 		}
-	}
-}
-
-// media queries to make secondary mission statement containers responsive
-@media screen and (max-width: $sm-screen) {
-	.main-container {
-		.secondary-mission-container {
-			@include mission-container(100%,250px);
-			img {
-				display: flex;
-				margin: 0 auto;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: $sm-screen) {
-	.main-container {
-		//		background-color: #F9FCF8;
-		.secondary-mission-container {
-			@include mission-container(100%,400px);
-			img {
-				display: flex;
-				margin: 0 auto;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: $md-screen) {
-	.main-container {
-		.secondary-mission-container {
-			@include mission-container(100%,500px);
-			img {
-				display: flex;
-				margin: 0 auto;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: $lg-screen) {
-	.main-container {
 		.secondary-mission-container {
 			@include mission-container($lg-screen,550px);
-			img {
-				display: flex;
-				margin: 0 auto;
+		}
+		#mission-1 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/efficient_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
 			}
 		}
-	}
-}
-
-// media queries to make primary mission statement section responsive based on screen size
-@media screen and (max-width: $sm-screen) {
-	.primary-mission-statement {
-		@include primary-mission-statement(2.7rem);
-	}
-}
-
-@media screen and (min-width: $sm-screen) {
-	.primary-mission-statement {
-		@include primary-mission-statement(3.5rem);
-	}
-}
-
-@media screen and (min-width: $md-screen) {
-	.primary-mission-statement {
-		@include primary-mission-statement(4.5rem);
-	}
-}
-
-@media screen and (min-width: $lg-screen) {
-	.primary-mission-statement {
-		@include primary-mission-statement(5.1rem);
-	}
-}
-
-// media queries to make secondary mission statement sections responsive based on screen size
-@media screen and (max-width: $lg-screen) {
-	.secondary-mission-statement {
-		@include secondary-mission-statement(0.4rem,100%);
-		.text-emphasis {
-			@include mission-statement-emphasis-text(1.3rem);
+		#mission-2 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/alternative_energy.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
+			}
 		}
-		div {
-			font-size:1.1rem;
-			font-weight: 400;
-			color: white;
+		#mission-3 {
+			position: relative;
+			display: block;
+			& ::after {
+				@include background-image("../images/improve_efficiency.png") {
+					@include background-image-transparency($image-transparency);
+				}
+			}
+			.secondary-mission-statement {
+				@include secondary-mission-statement(1rem,100%);
+				.text-emphasis {
+					@include mission-statement-emphasis-text(4.5rem);
+				}
+			}
 		}
-	}
-}
-
-@media screen and (min-width: $lg-screen) {
-	.secondary-mission-statement {
-		@include secondary-mission-statement(0.8rem,$lg-screen);
-		.text-emphasis {
-			@include mission-statement-emphasis-text(1.5rem);
+		section {
+			width: $lg-screen;
+			.commitment-statement {
+				@include background-image("../images/hands_in.png");
+				height: 200px;
+				.commitment-statement-child {
+					background: rgba(130,232,131,0.4);
+					width: 100%;
+					height: 100%;
+					z-index:1;
+					display: flex;
+					align-items: center;
+					h2 {
+						font-size: 6rem;
+						font-family: "Questrial", sans-serif;
+						text-shadow: 3px 3px white;
+					}
+				}
+			}
+			.commitment-parent-container {
+				display: flex;
+				flex-wrap:wrap;
+				align-items: center;
+				font-size: 1rem;
+				.commitment-child-container {
+					@include commitment-child-container(25%,120px);
+				}
+			}
 		}
-		div {
-			font-size:1.4rem;
-			font-weight: 400;
-			color: white;
-		}
-	}
-}
-
-// collaboration section
-.commitment-parent-container {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	max-width: $lg-screen;
-}
-
-// media queries to make commitment section responsive
-
-@media screen and (max-width: $sm-screen) {
-	.commitment-child-container {
-		@include commitment-child-container(100%,75px);
-	}
-}
-
-@media screen and (min-width: $sm-screen) {
-	.commitment-child-container {
-		@include commitment-child-container(50%,150px);
-	}
-}
-
-@media screen and (min-width: $md-screen) {
-	.commitment-child-container {
-		@include commitment-child-container(25%,200px);
 	}
 }
 

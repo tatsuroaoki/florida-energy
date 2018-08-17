@@ -370,32 +370,48 @@ body {
 				}
 			}
 		}
-		section {
+		#commitment-container {
 			width: 100%;
+			position: relative;
+			background-color: #E9F2FA;
 			.commitment-statement {
-				@include background-image("../images/hands_in.png");
-				height: 100px;
+				//				height: 70px;
 				.commitment-statement-child {
-					background: rgba(130,232,131,0.4);
+					//					background: rgba(130,232,131,1);
+					color: #0C9E59;
 					width: 100%;
-					height: 100%;
 					z-index:1;
 					display: flex;
 					align-items: center;
 					h2 {
-						font-size: 2.2rem;
+						font-size: 9vw;
 						font-family: "Questrial", sans-serif;
 						text-shadow: 3px 3px white;
 					}
 				}
 			}
-			.commitment-parent-container {
-				display: flex;
-				flex-wrap:wrap;
-				align-items: center;
-				font-size: 1rem;
-				.commitment-child-container {
-					@include commitment-child-container(25%,120px);
+			.mission-statement-article {
+				margin: 1rem 0 0 0;
+				div p {
+					font-family: "Questrial", sans-serif;
+					font-size: 1.1rem;;
+					background-color: #0C9E59;
+					color: white;
+					padding: 1rem;
+					line-height: 1.75rem;
+				}
+				.primary-message {
+					font-family: "Questrial", sans-serif;
+					text-transform: uppercase;
+					text-align:center;
+					font-weight: bold;
+					font-size: 1.2rem;
+					color: #006747;
+					padding: 1rem;
+				}
+				.chart-container {
+					display: flex;
+					flex-wrap: wrap;
 				}
 			}
 		}
@@ -601,59 +617,53 @@ body {
 				}
 			}
 		}
-		section {
+		#commitment-container {
 			width: 100%;
+			position: relative;
+			background-color: #E9F2FA;
 			.commitment-statement {
-				@include background-image("../images/hands_in.png");
-				height: 120px;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
 				.commitment-statement-child {
-					background: rgba(130,232,131,0.4);
+					color: #0C9E59;
 					width: 100%;
-					height: 100%;
 					z-index:1;
-					display: flex;
-					align-items: center;
 					h2 {
-						font-size: 4rem;
+						text-align: center;
+						font-size: 3.8rem;
 						font-family: "Questrial", sans-serif;
 						text-shadow: 3px 3px white;
 					}
 				}
 			}
-			.commitment-parent-container {
-				display: flex;
-				flex-wrap:wrap;
-				align-items: center;
-				font-size: 1rem;
-				.commitment-child-container {
-					@include commitment-child-container(25%,120px);
+			.mission-statement-article {
+				margin: 1rem 0 0 0;
+				div p {
+					font-family: "Questrial", sans-serif;
+					font-size: 1.2rem;
+					background-color: #0C9E59;
+					color: white;
+					padding: 1rem;
+					line-height: 1.75rem;
+				}
+				.primary-message {
+					font-family: "Questrial", sans-serif;
+					text-transform: uppercase;
+					text-align:center;
+					font-weight: bold;
+					font-size: 1.5rem;
+					color: #006747;
+					padding: 1rem;
+				}
+				.chart-container {
+					display: flex;
+					flex-wrap: wrap;
 				}
 			}
 		}
 	}
-	footer {
-		//		display: flex;
-		align-items: center;
-		text-align: center;
-		background-color: black;
-		div {
-			background-color: black;
-			i{
-				width: 10%;
-			}
-			.fa-facebook {
-				color: #3b5998;
-			}
 
-			.fa-twitter-square {
-				color: #1da1f2;
-			}
-
-			.fa-linkedin {
-				color: #1985bc;
-			}
-		}
-	}
 	footer {
 		//		display: flex;
 		align-items: center;
@@ -770,32 +780,23 @@ body {
 				}
 			}
 		}
-		section {
-			width: 100%;
-			.commitment-statement {
-				@include background-image("../images/hands_in.png");
-				height: 150px;
+		#commitment-container {
+			.commitment-statement {;
 				.commitment-statement-child {
-					background: rgba(130,232,131,0.4);
-					width: 100%;
-					height: 100%;
-					z-index:1;
-					display: flex;
-					align-items: center;
 					h2 {
-						font-size: 5rem;
-						font-family: "Questrial", sans-serif;
-						text-shadow: 3px 3px white;
+						font-size: 4rem;
 					}
 				}
 			}
-			.commitment-parent-container {
-				display: flex;
-				flex-wrap:wrap;
-				align-items: center;
-				font-size: 1rem;
-				.commitment-child-container {
-					@include commitment-child-container(25%,120px);
+			.mission-statement-article {
+				margin: 1rem 0 0 0;
+				div p {
+					font-size: 1.2rem;
+				}
+				.primary-message {
+					font-size: 1.5rem;
+				}
+				.chart-container {
 				}
 			}
 		}
@@ -892,61 +893,32 @@ body {
 				}
 			}
 		}
-		section {
-			width: $lg-screen;
+		#commitment-container {
+			max-width: $lg-screen;
 			.commitment-statement {
-				@include background-image("../images/hands_in.png");
-				height: 200px;
 				.commitment-statement-child {
-					background: rgba(130,232,131,0.4);
-					width: 100%;
-					height: 100%;
-					z-index:1;
-					display: flex;
-					align-items: center;
 					h2 {
-						font-size: 6rem;
+						font-size: 4.2rem;
 						font-family: "Questrial", sans-serif;
 						text-shadow: 3px 3px white;
 					}
 				}
 			}
-			.commitment-parent-container {
-				display: flex;
-				flex-wrap:wrap;
-				align-items: center;
-				font-size: 1rem;
-				.commitment-child-container {
-					@include commitment-child-container(25%,120px);
+			.secondary-mission-container {
+				@include mission-container($lg-screen,100%);
+				.mission-statement-article {
+					div p {
+						font-family: "Questrial", sans-serif;
+						font-size: 1.4rem;
+					}
+					.primary-message {
+						font-size: 1.5rem;
+						color: #006747;
+					}
+					.chart-container {
+					}
 				}
 			}
 		}
 	}
-}
-.mission-statement-article {
-	margin: 1rem 0 0 0;
-	p {
-		line-height: 1.75rem;
-	}
-	div p {
-		font-family: "Questrial", sans-serif;
-		background-color: #0C9E59;
-		color: white;
-		padding: 1rem;
-	}
-}
-
-.primary-message {
-	font-family: "Questrial", sans-serif;
-	text-transform: uppercase;
-	text-align:center;
-	font-weight: bold;
-	font-size: 1.5rem;
-	color: #006747;
-	padding: 1rem;
-}
-
-.chart-container {
-	display: flex;
-	flex-wrap: wrap;
 }

@@ -315,43 +315,47 @@ body {
         .main-container #mission-3 .learn .learn-button h4 {
           margin: 0 1rem;
           padding: 0.5rem; }
-  .main-container section {
-    width: 100%; }
-    .main-container section .commitment-statement {
-      background-image: url("../images/hands_in.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100px; }
-      .main-container section .commitment-statement .commitment-statement-child {
-        background: rgba(130, 232, 131, 0.4);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        .main-container section .commitment-statement .commitment-statement-child h2 {
-          font-size: 2.2rem;
-          font-family: "Questrial", sans-serif;
-          text-shadow: 3px 3px white; }
-    .main-container section .commitment-parent-container {
+  .main-container #commitment-container {
+    width: 100%;
+    position: relative;
+    background-color: #E9F2FA; }
+    .main-container #commitment-container .commitment-statement .commitment-statement-child {
+      color: #0C9E59;
+      width: 100%;
+      z-index: 1;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center;
-      font-size: 1rem; }
-      .main-container section .commitment-parent-container .commitment-child-container {
-        width: 25%;
-        min-height: 120px;
+              align-items: center; }
+      .main-container #commitment-container .commitment-statement .commitment-statement-child h2 {
+        font-size: 9vw;
+        font-family: "Questrial", sans-serif;
+        text-shadow: 3px 3px white; }
+    .main-container #commitment-container .mission-statement-article {
+      margin: 1rem 0 0 0; }
+      .main-container #commitment-container .mission-statement-article div p {
+        font-family: "Questrial", sans-serif;
+        font-size: 1.1rem;
+        background-color: #0C9E59;
+        color: white;
         padding: 1rem;
-        background-color: #F0EAE8; }
+        line-height: 1.75rem; }
+      .main-container #commitment-container .mission-statement-article .primary-message {
+        font-family: "Questrial", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #006747;
+        padding: 1rem; }
+      .main-container #commitment-container .mission-statement-article .chart-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
 
   footer {
     display: -webkit-box;
@@ -621,60 +625,51 @@ body {
         .main-container #mission-3 .learn .learn-button h4 {
           margin: 0 1rem;
           padding: 0.5rem; }
-  .main-container section {
-    width: 100%; }
-    .main-container section .commitment-statement {
-      background-image: url("../images/hands_in.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 120px; }
-      .main-container section .commitment-statement .commitment-statement-child {
-        background: rgba(130, 232, 131, 0.4);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        .main-container section .commitment-statement .commitment-statement-child h2 {
-          font-size: 4rem;
-          font-family: "Questrial", sans-serif;
-          text-shadow: 3px 3px white; }
-    .main-container section .commitment-parent-container {
+  .main-container #commitment-container {
+    width: 100%;
+    position: relative;
+    background-color: #E9F2FA; }
+    .main-container #commitment-container .commitment-statement {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      font-size: 1rem; }
-      .main-container section .commitment-parent-container .commitment-child-container {
-        width: 25%;
-        min-height: 120px;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .main-container #commitment-container .commitment-statement .commitment-statement-child {
+        color: #0C9E59;
+        width: 100%;
+        z-index: 1; }
+        .main-container #commitment-container .commitment-statement .commitment-statement-child h2 {
+          text-align: center;
+          font-size: 3.8rem;
+          font-family: "Questrial", sans-serif;
+          text-shadow: 3px 3px white; }
+    .main-container #commitment-container .mission-statement-article {
+      margin: 1rem 0 0 0; }
+      .main-container #commitment-container .mission-statement-article div p {
+        font-family: "Questrial", sans-serif;
+        font-size: 1.2rem;
+        background-color: #0C9E59;
+        color: white;
         padding: 1rem;
-        background-color: #F0EAE8; }
-
-  footer {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    background-color: black; }
-    footer div {
-      background-color: black; }
-      footer div i {
-        width: 10%; }
-      footer div .fa-facebook {
-        color: #3b5998; }
-      footer div .fa-twitter-square {
-        color: #1da1f2; }
-      footer div .fa-linkedin {
-        color: #1985bc; }
+        line-height: 1.75rem; }
+      .main-container #commitment-container .mission-statement-article .primary-message {
+        font-family: "Questrial", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #006747;
+        padding: 1rem; }
+      .main-container #commitment-container .mission-statement-article .chart-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
 
   footer {
     -webkit-box-align: center;
@@ -861,43 +856,14 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
-  .main-container section {
-    width: 100%; }
-    .main-container section .commitment-statement {
-      background-image: url("../images/hands_in.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 150px; }
-      .main-container section .commitment-statement .commitment-statement-child {
-        background: rgba(130, 232, 131, 0.4);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        .main-container section .commitment-statement .commitment-statement-child h2 {
-          font-size: 5rem;
-          font-family: "Questrial", sans-serif;
-          text-shadow: 3px 3px white; }
-    .main-container section .commitment-parent-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      font-size: 1rem; }
-      .main-container section .commitment-parent-container .commitment-child-container {
-        width: 25%;
-        min-height: 120px;
-        padding: 1rem;
-        background-color: #F0EAE8; } }
+  .main-container #commitment-container .commitment-statement .commitment-statement-child h2 {
+    font-size: 4rem; }
+  .main-container #commitment-container .mission-statement-article {
+    margin: 1rem 0 0 0; }
+    .main-container #commitment-container .mission-statement-article div p {
+      font-size: 1.2rem; }
+    .main-container #commitment-container .mission-statement-article .primary-message {
+      font-size: 1.5rem; } }
 @media screen and (min-width: 1200px) {
   .main-container #homepage-video-container {
     width: 1200px;
@@ -1065,67 +1031,25 @@ body {
         font-family: "Poppins", sans-serif;
         line-height: 1.2;
         text-shadow: 2.5px 2.5px #3B3B3A; }
-  .main-container section {
-    width: 1200px; }
-    .main-container section .commitment-statement {
-      background-image: url("../images/hands_in.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 200px; }
-      .main-container section .commitment-statement .commitment-statement-child {
-        background: rgba(130, 232, 131, 0.4);
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        .main-container section .commitment-statement .commitment-statement-child h2 {
-          font-size: 6rem;
-          font-family: "Questrial", sans-serif;
-          text-shadow: 3px 3px white; }
-    .main-container section .commitment-parent-container {
+  .main-container #commitment-container {
+    max-width: 1200px; }
+    .main-container #commitment-container .commitment-statement .commitment-statement-child h2 {
+      font-size: 4.2rem;
+      font-family: "Questrial", sans-serif;
+      text-shadow: 3px 3px white; }
+    .main-container #commitment-container .secondary-mission-container {
+      width: 1200px;
+      min-height: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      font-size: 1rem; }
-      .main-container section .commitment-parent-container .commitment-child-container {
-        width: 25%;
-        min-height: 120px;
-        padding: 1rem;
-        background-color: #F0EAE8; } }
-.mission-statement-article {
-  margin: 1rem 0 0 0; }
-  .mission-statement-article p {
-    line-height: 1.75rem; }
-  .mission-statement-article div p {
-    font-family: "Questrial", sans-serif;
-    background-color: #0C9E59;
-    color: white;
-    padding: 1rem; }
-
-.primary-message {
-  font-family: "Questrial", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #006747;
-  padding: 1rem; }
-
-.chart-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+          flex-wrap: wrap; }
+      .main-container #commitment-container .secondary-mission-container .mission-statement-article div p {
+        font-family: "Questrial", sans-serif;
+        font-size: 1.4rem; }
+      .main-container #commitment-container .secondary-mission-container .mission-statement-article .primary-message {
+        font-size: 1.5rem;
+        color: #006747; } }
 
 /*# sourceMappingURL=index.css.map */

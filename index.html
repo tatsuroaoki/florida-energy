@@ -6,11 +6,12 @@
 		<title>FESC</title>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="styles/index.css">
-		<link href="https://fonts.googleapis.com/css?family=Poppins|Quicksand:400,500,700|Roboto|Lalezar" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins|Quicksand:400,500,700|Roboto|Lalezar|Questrial" rel="stylesheet">
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="script/charts.js"></script>
 		<script src="script/video.js"></script>
-		<!--		<script src="script/renewable-chart.js"></script>-->	
+		<script src="script/header.js"></script>
 	</head>
 	<body>
 		<header>
@@ -21,15 +22,8 @@
 						<div></div>
 						<div></div>
 					</div>
-					<div class="global-dropdown-content">
-						<a href="#">Home</a>
-						<a href="#">Research</a>
-						<a href="energy-education.html">Education</a>
-						<a href="#">Outreach</a>
-						<a href="#">User Facilities</a>
-						<a href="industry.html">Energy Industry</a>
-						<a href="#">Advisory Board</a>
-						<a href="#">Contact Us</a>
+					<div class="global-dropdown-content" id="headerApp">
+						<nav-content></nav-content>
 					</div>
 				</div>
 				<div class="global-nav-logo"></div>
@@ -45,27 +39,30 @@
 			<div id="homepage-video-container">
 				<iframe class="homepage-video" src="https://www.youtube.com/embed/YA2ofbdd-G8?autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
-			<section>
+			<br>
+			<section id="mission-1" class="secondary-mission-container">
 				<div class="secondary-mission-statement">
-					<h2><div>Develop and Implement Plans That Are</div><div class="text-emphasis"> Environmentally Compatible, Sustainable, and Efficient</div></h2>				
+					<h2><div>Develop and Implement Plans That Are</div><div class="text-emphasis"> Environmentally Compatible, Sustainable, and Efficient</div></h2>
 				</div>
-				<div id="mission-1" class="secondary-mission-container"></div>
 			</section>
-			<section>
+			<br>
+			<section id="mission-2" class="secondary-mission-container">
 				<div class="secondary-mission-statement">
 					<h2><div>Innovate Energy Systems That Lead To</div><div class="text-emphasis"> Alternative Energy Strategies</div></h2>				
 				</div>
-				<div id="mission-2" class="secondary-mission-container"></div>
 			</section>
-			<section>
+			<br>
+			<section id="mission-3" class="secondary-mission-container">
 				<div class="secondary-mission-statement">
 					<h2><div>Improve</div><div class="text-emphasis"> Energy Efficiency</div></h2>				
 				</div>
-				<div id="mission-3" class="secondary-mission-container"></div>
 			</section>
+			<br>
 			<section>
-				<div class="secondary-mission-statement">
-					<h2><div>Our</div><div class="text-emphasis">Commitment</div></h2>
+				<div class="commitment-statement">
+					<div class="commitment-statement-child">
+						<h2>Our Commitment</h2>
+					</div>
 				</div>
 				<div class="commitment-parent-container">
 					<div id="commitment-1" class="commitment-child-container">
@@ -82,9 +79,12 @@
 					</div>
 				</div>
 			</section>
+			<br>
 			<section>
-				<div class="secondary-mission-statement">
-					<h2><div>Why</div><div class="text-emphasis">Should We Care?</div></h2>
+				<div class="commitment-statement">
+					<div class="commitment-statement-child">
+						<h2>Why Should We Care?</h2>
+					</div>
 				</div>
 				<article class="secondary-mission-container">
 					<div class="mission-statement-article">

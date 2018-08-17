@@ -6,6 +6,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="styles/index.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins|Quicksand:400,500,700|Roboto" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+		</script>
+		<script src="script/header.js"></script>
 	</head>
 	<body>
 		<header>
@@ -16,15 +19,8 @@
 						<div></div>
 						<div></div>
 					</div>
-					<div class="global-dropdown-content">
-						<a href="index.html">Home</a>
-						<a href="#">Research</a>
-						<a href="#">Education</a>
-						<a href="#">Outreach</a>
-						<a href="#">User Facilities</a>
-						<a href="industry.html">Energy Industry</a>
-						<a href="#">Advisory Board</a>
-						<a href="#">Contact Us</a>
+					<div class="global-dropdown-content" id="headerApp">
+						<nav-content></nav-content>
 					</div>
 				</div>
 				<div class="global-nav-logo"></div>

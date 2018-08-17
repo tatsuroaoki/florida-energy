@@ -3,7 +3,7 @@ Vue.component('nav-content',{
 })
 
 Vue.component('footer-content', {
-	template: '<div><i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-linkedin"></i></div>'
+	template: '<div><i class="fab fa-facebook fa-2x"></i><i class="fab fa-twitter-square fa-2x"></i><i class="fab fa-linkedin fa-2x"></i></div>'
 })
 
 document.addEventListener("DOMContentLoaded", function() {

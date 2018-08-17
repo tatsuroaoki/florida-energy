@@ -115,7 +115,7 @@ body {
 	color: $main-font-color;
 	font-family: $main-font;
 	font-weight:400;
-	background-color: #F9FCF8;
+	background-color: white;
 }
 
 #homepage-video-container {
@@ -310,6 +310,30 @@ body {
 			}
 		}
 	}
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		text-align: center;
+		background-color: black;
+		div {
+			background-color: black;
+			i{
+				width: 100%;
+			}
+			.fa-facebook {
+				color: #3b5998;
+			}
+
+			.fa-twitter-square {
+				color: #1da1f2;
+			}
+
+			.fa-linkedin {
+				color: #1985bc;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: $sm-screen) {
@@ -417,6 +441,53 @@ body {
 				.commitment-child-container {
 					@include commitment-child-container(50%,90px);
 				}
+			}
+		}
+	}
+	footer {
+		//		display: flex;
+		align-items: center;
+		text-align: center;
+		background-color: black;
+		div {
+			background-color: black;
+			i{
+				width: 10%;
+			}
+			.fa-facebook {
+				color: #3b5998;
+			}
+
+			.fa-twitter-square {
+				color: #1da1f2;
+			}
+
+			.fa-linkedin {
+				color: #1985bc;
+			}
+		}
+	}
+	footer {
+		//		display: flex;
+		align-items: center;
+		text-align: center;
+		background-color: black;
+		div {
+			background-color: black;
+			i{
+				width: 10%;
+				max-width: 50px;
+			}
+			.fa-facebook {
+				color: #3b5998;
+			}
+
+			.fa-twitter-square {
+				color: #1da1f2;
+			}
+
+			.fa-linkedin {
+				color: #1985bc;
 			}
 		}
 	}
@@ -530,7 +601,6 @@ body {
 		}
 	}
 }
-
 
 @media screen and (min-width: $lg-screen) {
 	.main-container {
@@ -650,7 +720,6 @@ body {
 		}
 	}
 }
-
 #commitment-1 {
 	@include commitment-colors(#782F40,#CEB888);
 	.commitment-action {

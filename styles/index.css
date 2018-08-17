@@ -1103,7 +1103,7 @@ body {
         padding: 1rem;
         background-color: #F0EAE8; } }
 .mission-statement-article {
-  margin: 1rem auto; }
+  margin: 1rem 0 0 0; }
   .mission-statement-article p {
     line-height: 1.75rem; }
   .mission-statement-article div p {

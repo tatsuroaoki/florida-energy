@@ -28,6 +28,7 @@ $lg-screen-video-height: 400px;
 }
 
 @mixin video-button($radius) {
+	color: white;
 	background-color: #0C9E59;
 	font-family: "Questrial", sans-serif;
 	width: 10rem;

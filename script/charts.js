@@ -18,7 +18,7 @@ function getRenewableEnergyData() {
 	console.log("Getting data is the third step.")
 
 	let request = new XMLHttpRequest()
-	let requestUrl = "http://api.eia.gov/series/?api_key=172ffbfd5cfe29fb085835f6180c4217&series_id=SEDS.REPRB.FL.A"
+	let requestUrl = "https://api.eia.gov/series/?api_key=172ffbfd5cfe29fb085835f6180c4217&series_id=SEDS.REPRB.FL.A"
 	request.open('GET', requestUrl, true)
 
 	request.onload = function(){
@@ -41,7 +41,7 @@ function getRenewableEnergyData() {
 // Function for Total Energy Consumption
 function getEnergyConsumptionData() {
 	let request = new XMLHttpRequest()
-	let requestUrl = "http://api.eia.gov/series/?api_key=172ffbfd5cfe29fb085835f6180c4217&series_id=SEDS.TETCB.FL.A"
+	let requestUrl = "https://api.eia.gov/series/?api_key=172ffbfd5cfe29fb085835f6180c4217&series_id=SEDS.TETCB.FL.A"
 
 	// Request data
 	request.open('GET',requestUrl)
